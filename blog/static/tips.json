@@ -1,0 +1,98 @@
+{
+	"tips":[{
+		"title": "react学习笔记",
+		"type": "0",
+		"brand": "react",	
+		"content": ""
+	},{
+		"title": "webpack学习笔记",
+		"type": "0",
+		"brand": "webpack",	
+		"content": ""
+	},{
+		"title": "vue2.0 axios的使用",
+		"type": "0",
+		"brand": "vue",	
+		"content": "<div class='tips_wrap'><h2 class='tips_bigname'>vue2.0 axios的使用</h2><p class='tips_name'>痛点剖析</p><div class='t_indent_16 duanluo'><p>我们经常会碰到这么一个情况，通过ajax得到后台数据，一系列的商品信息，比如商品名字，头图，价格，库存等等信息，我们需要循环遍历到页面上，这时候就会遇到我最头疼的问题--‘字符串拼接’（这尼玛代码写了半小时，拼了一下午 很嗨...你行你上啊）</p></div><div class='tips_name'>axios的使用方法</div><div class='duanluo'><p>1.先用死数据写好html样式</p><p>2.axios.get获取数据绑定data</p><p>3.用双大括号{{ }}把之前写的死数据替换成真实数据</p></div><img src='static/img/tips_vue/axios1.png'><img src='static/img/tips_vue/axios2.png'><img src='static/img/tips_vue/axios3.png'></div>"
+	},{
+		"title": "vue2.0路由动态传值的几种常用方法",
+		"type": "0",
+		"brand": "vue",
+		"content": "<div class='tips_wrap'><h2 class='tips_bigname'>vue2.0路由动态传值的几种常用方法</h2><p class='t_indent_16 duanluo'>平时我们在写vue项目时候，通常会遇到往路由里面传数据（固定数据/动态数据）,下面展示了3种我比较常用的方法，各有利弊，仅供参考!</p><img src='static/img/tips_vue/router-link.png'/></div>"
+	},{
+		"title": "CSS: body{font-size: 62.5%;}为什么这么写？？？",
+		"type": "1",
+		"brand": "html+css",
+		"content": "<div class='tips_wrap'><h2 class='tips_bigname'>CSS: body{font-size: 62.5%;}为什么？？？</h2><div class='duanluo'><p class='t_indent_16'>在网页设计中我们经常看见body{font-size: 62.5%;}这样的设置，为什么偏偏是62.5%呢？这主要是为了方便em与px相互转换，em的初始值为1em=16px，显然这样的话，如1.2em则=19.2px，可是我们在设置的时候很少看见19.2px这样表示的大小，也就是在用px表示大小时数值是不带小数位的。当设置了body{font-size: 62.5%;}时，1em则=16px*62.5%=10px,1.2em则=12px，这是不是就简单多了，准确多了呢~~</p></div></div>"
+	},{
+		"title": "彻底弄懂css中单位px和em,rem的区别",
+		"type": "0",
+		"brand": "html+css",
+		"content":"<div class='tips_wrap'><h2 class='tips_bigname'>彻底弄懂css中单位px和em,rem的区别</h2><div class='duanluo'><p class='bold tips_name'>px特点</p><p>1. IE无法调整那些使用px作为单位的字体大小；</p><p>2. 国外的大部分网站能够调整的原因在于其使用了em或rem作为字体单位；</p><p>3. Firefox能够调整px和em，rem，但是96%以上的中国网民使用IE浏览器(或内核)。px像素（Pixel）。相对长度单位。像素px是相对于显示器屏幕分辨率而言的。(引自CSS2.0手册)em是相对长度单位。相对于当前对象内文本的字体尺寸。如当前对行内文本的字体尺寸未被人为设置，则相对于浏览器的默认字体尺寸。(引自CSS2.0手册)</p></div><div class='duanluo'><p class='t_indent_16'>任意浏览器的默认字体高都是16px。所有未经调整的浏览器都符合: 1em=16px。那么12px=0.75em,10px=0.625em。为了简化font-size的换算，需要在css中的body选择器中声明Font-size=62.5%，这就使em值变为 16px*62.5%=10px, 这样12px=1.2em, 10px=1em, 也就是说只需要将你的原来的px数值除以10，然后换上em作为单位就行了。</p></div><div class='duanluo'><p class='tips_name'>em特点</p><p>1. em的值并不是固定的；</p><p>2. em会继承父级元素的字体大小。</p></div><div class='duanluo'><p class='tips_name'>所以我们在写CSS的时候，需要<span class='strong'>注意两点：</span></p><p>1. em的值并不是固定的；</p><p>2. em会继承父级元素的字体大小。</p></div><div class='duanluo'><p class='t_indent_16'>也就是避免1.2 * 1.2= 1.44的现象。比如说你在#content中声明了字体大小为1.2em，那么在声明p的字体大小时就只能是1em，而不是1.2em, 因为此em非彼em，它因继承#content的字体高而变为了1em=12px。</p></div><div class='duanluo'><p class='tips_name'>rem特点 </p><p class='t_indent_16'> rem是CSS3新增的一个相对单位（root em，根em），这个单位引起了广泛关注。这个单位与em有什么区别呢？区别在于使用rem为元素设定字体大小时，仍然是相对大小，但相对的只是HTML根元素。这个单位可谓集相对大小和绝对大小的优点于一身，通过它既可以做到只修改根元素就成比例地调整所有字体大小，又可以避免字体大小逐层复合的连锁反应。目前，除了IE8及更早版本外，所有浏览器均已支持rem。对于不支持它的浏览器，应对方法也很简单，就是多写一个绝对单位的声明。这些浏览器会忽略用rem设定的字体大小</p></div></div>"
+	},{
+		"title": "CSS3 基本要素概览",
+		"type": "1",
+		"brand": "css3",
+		"content":"<div class='tips_wrap'><h2 class='tips_bigname'>CSS3 基本要素概览</h2><div class='duanluo'><p class='t_indent_16'>这篇文章将对 CSS 的几个新属性 (text-shadow，box-shadow，and border-radius) 做基本介绍。这些 CSS3 属性通常用来加强页面布局。</p></div><div class='duanluo'><p class='tips_name'>RGBA</p><p class='t_indent_16'>前面的 3 个值是 RGB 颜色值，最后一个值是透明度的级别（0 = 透明，1 = 不透明）。</p><img src='static/img/tips3_1.gif' /><p class='mr_t_b_10'>RGBA 可以应用于与颜色的任何属性，如字体颜色，边框颜色，背景颜色，阴影颜色等。</p><img src=''static/img/tips3_2.gif' /></div><div class='duanluo'><p class='tips_name'>Text Shadow</p><p class='t_indent_16'>文字阴影的结构顺序为：x 轴偏移，y 轴偏移，模糊，颜色。</p><img src=''static/img/tips3_3.gif' /><p class='mr_t_b_10'>设置一个负值的 x 轴偏移将阴影转移到左侧。设置一个负值的 y 轴偏移转将阴影转移到顶部。别忘了，你可以在阴影颜色中应用 RGBA 值。</p><img src=''static/img/tips3_4.gif' /><p class='mr_t_b_10'>您也可以指定一个文本阴影列表（以逗号分隔）。下面的示例使用两个文本阴影声明制作了文字凸版效果（顶部 1px 和底部1px）。</p><div><pre><span style='color: #800000;'>text-shadow: 0 1px 0 #fff, 0 -1px 0 #000;</span></pre></div><img src=''static/img/tips3_5.gif' /></div><div class='duanluo'><p class='tips_name'>Border Radius</p>　<p class='t_indent_16'>边界半径 (border radius) 的写法类似内边距 (padding) 和 外边距 (margin) 属性（例如：border-radius:20px）。为使浏览器渲染边界半径属性，需要在属性名称加上前缀，Webkit 引擎的浏览器为 “-webkit-”，Firefox 则为 “-moz-”。</p><img src=''static/img/tips3_6.gif' /><p class='mr_t_b_10'>您可以为每个边角指定不同的值。注意：Firefox 和 Webkit 的边角属性名称是不相同的。</p><img src=''static/img/tips3_7.gif' /></div><div class='duanluo'><p class='tips_name'>Box Shadow</p><p class='t_indent_16'>盒阴影的结构和 text-shadow 相同，x 轴偏移，y 轴偏移，模糊，颜色。</p><img src=''static/img/tips3_8.gif' /><p class='mr_t_b_10'>同样，您可以设置一个以上的盒阴影。</p></div>"
+	},{
+		"title": "关于响应式布局",
+		"type": "0",
+		"brand": "响应式",
+		"content": "<div class='tips_wrap'><h2 class='tips_bigname'>关于响应式布局</h2><div class='duanluo'>在谈响应式布局前，我们先梳理下网页设计中整体页面排版布局，常见的主要有如下几种类型：</div><div class='duanluo'><p class='bold tips_name'>布局类型</p><img src='static/img/tips4_1.png' /></div><div class='duanluo'><p class='bold tips_name'>布局实现</p><p class='t_indent_16'>采用何种方式实现布局设计，也有不同的方式，这里基于页面的实现单位而言，分为四种类型：固定布局、可切换的固定布局、弹性布局、混合布局。</p></div><div class='duanluo'><p><span class='bold tips_name'>1.固定布局:</span>以像素作为页面的基本单位，不管设备屏幕及浏览器宽度，只设计一套尺寸；</p><p><span class='bold tips_name'>2.可切换的固定布局:</span>同样以像素作为页面单位，参考主流设备尺寸，设计几套不同宽度的布局。通过设别的屏幕尺寸或浏览器宽度，选择最合适的那套宽度布局；</p><p><span class='bold tips_name'>3.弹性布局:</span>以百分比作为页面的基本单位，可以适应一定范围内所有尺寸的设备屏幕及浏览器宽度，并能完美利用有效空间展现最佳效果；</p><p><span class='bold tips_name'>4.混合布局:</span>同弹性布局类似，可以适应一定范围内所有尺寸的设备屏幕及浏览器宽度，并能完美利用有效空间展现最佳效果；只是混合像素、和百分比两种单位作为页面单位。</p></div><div class='duanluo'><img src='static/img/tips4_2.png' /></div><p class='duanluo t_indent_16'>可切换的固定布局、弹性布局、混合布局都是目前可被采用的响应式布局方式：其中可切换的固定布局的实现成本最低，但拓展性比较差；而弹性布局与混合布局效果具响应性，都是比较理想的响应式布局实现方式。只是对于不同类型的页面排版布局实现响应式设计，需要采用不用的实现方式。通栏、等分结构的适合采用弹性布局方式、而对于非等分的多栏结构往往需要采用混合布局的实现方式。</p><div class='duanluo'><img src='static/img/tips4_3.png' /></div><div class='duanluo'><p class='bold tips_name'>布局响应</p><p class='t_indent_16'>对页面进行响应式的设计实现，需要对相同内容进行不同宽度的布局设计，有两种方式：桌面优先（从桌面端开始向下设计）；移动优先（从移动端向上设计）；</p><p class='t_indent_16'>无论基于那种模式的设计，要兼容所有设备，布局响应时不可避免地需要对模块布局做一些变化（发生布局改变的临界点称之为断点），</p><p class='t_indent_16'>我们通过JS获取设备的屏幕宽度，来改变网页的布局，这一过程我们可以称之为布局响应屏幕。常见的主要有如下几种方式：</p></div><div class='duanluo'><p class='bold tips_name'>布局不变，即页面中整体模块布局不发生变化，主要有：</p><p class='bold tips_name'>1.模块中内容：挤压－拉伸；</p><p class='bold tips_name'>2.模块中内容：换行－平铺；</p><p class='bold tips_name'>3.模块中内容：删减－增加；</p></div><div class='duanluo'><img src='static/img/tips4_4.png' /></div><div class='duanluo'><img src='static/img/tips4_5.png' /></div><div class='duanluo'><img src='static/img/tips4_6.png' /></div><div class='duanluo'><p class='bold tips_name'>布局改变，即页面中的整体模块布局发生变化，主要有：</p><p class='bold tips_name'>1.模块位置变换；</p><p class='bold tips_name'>2.模块展示方式改变：隐藏－展开；</p><p class='bold tips_name'>3.模块数量改变：删减－增加；</p></div><div class='duanluo'><img src='static/img/tips4_7.png' /></div><div class='duanluo'><img src='static/img/tips4_8.png' /></div><div class='duanluo'><img src='static/img/tips4_9.png' /></div><p class='duanluo t_indent_16'>很多时候，单一方式的布局响应无法满足理想效果，需要结合多种组合方式，但原则上尽可能时保持简单轻巧，而且同一断点内（发生布局改变的临界点称之为断点）保持统一逻辑。否则页面实现得太过复杂，也会影响整体体验和页面性能。</p></div>"
+	},{
+		"title": "vue商城倒计时组件",
+		"type": "0",
+		"brand": "vue",
+		"content": "<div class='tips_wrap'><h2 class='tips_bigname'>vue商城倒计时组件</h2><p class='t_indent_16 duanluo'>作为一名电商公司的前端汪,最多碰到的就是运营大爷要搞活动了，头部banner有个倒计时，XXX开始/XXX结束,但是每次都要找个活动抄一遍html,css,js都觉得蛋蛋很疼，于是有了以下的思考......</p><img src='static/img/tips_vue/djs3.png'><p class='duanluo t_indent_16'>在学习vue的过程中,对组件的概念感到十分的有兴趣，类似JS函数的作用，可以传参,一劳永逸。</p><p class='tips_name'>组件是什么</p><p class='t_indent_16 duanluo'>组件 (Component) 是 Vue.js 最强大的功能之一。组件可以扩展 HTML 元素，封装可重用的代码。在较高层面上，组件是自定义元素，Vue.js 的编译器为它添加特殊功能。在有些情况下，组件也可以表现为用 is 特性进行了扩展的原生 HTML 元素。</p><p class='tips_name'>组件包含什么</p><div class='duanluo'><p>1.template (html模板)</p><p>2.script (js代码)</p><p>3.style (css代码)</p></div><div class='tips_name'>组件怎么使用</div><div class='duanluo'><p>1.注册组件Vue.component('名字',{})</p><p>2.写template模板</p><p>3.确定这个组件哪些地方是需要外部传进来的，通过props接收</p></div><div class='tips_name'>案列需求分析</div><div class='duanluo'><p>倒计时功能,每次变化的是开始和结束时间，因此，这2个参数是需要外部传进来。</p></div><img src='static/img/tips_vue/djs1.png'><img src='static/img/tips_vue/djs2.png'><p>在需要使用倒计时功能的地方直接< djs :begintime='xxx' :endtime='xxx'>< / djs >就行了</p></div>"
+	},{
+		"title": "移动端bug总结",
+		"type": "0",
+		"brand": "移动端",	
+		"content": "<div class='tips_wrap'><h2 class='tips_bigname'>移动端bug总结</h2><div class='duanluo'><p class='tips_name'>总结一下自己一年多来电商移动端项目开发遇到的bug</p><p>1.scroll事件在touchend之后才触发，如果要实时监控scroll的话，得禁止默认滚动，自己模拟滚动</p><p>2.h5的audio的自动播放autoplay属性，在手机端不支持。得用户和页面交互后才可调用play(),或者等img onload的时候触发</p><p>3.canvas的宽高不能直接设置在css样式里面，得通过js设置，而且不能can.style.width = xx+'px';必须can.width=xx;否则画圆会花出椭圆，位置也不对</p><p>4.getImageData属性判断刮开区域，有跨域问题，方法：把图片放置在服务器中，通过服务器返回给客户端，遵循同源策略；</p><p>5.touchstart慎用，由于触发过快，点击事件会传递到下面</p><p>6.jq的width()无法获取精确宽度,可以通过window.getComputedStyle(obj,null).getPropertyValue('width')的方法</p><p>7.手机端better-scroll插件bug：① 必须在dom回执完成后调用插件（vue里是this.$nextTick(()=>{})）② 调用元素是需要移动的元素的父级大盒子  ③ pc双倍点击问题 通过传递event。判断event._constructed的值取消 ④插件会默认计算上一次的盒子高度，通过refresh（）刷新</p></div></div>"
+	},{
+		"title": "CSS实现多行文本溢出显示省略号",
+		"type": "0",
+		"brand": "html+css",
+		"content": "<div class='tips_wrap'><h2 class='tips_bigname'>CSS3实现多行文本溢出显示省略号</h2><p class='tips_name'>实现方法：</p><img src='static/img/tips_css/slh1.png'><p class='tips_name'>效果如图：</p><img src='static/img/tips_css/slh2.png'><p class='tips_name'>适用范围：</p><p>因使用了WebKit的CSS扩展属性，该方法适用于WebKit浏览器及移动端；</p><p class='strong'>注：</p><p>1.-webkit-line-clamp用来限制在一个块元素显示的文本的行数。 为了实现该效果，它需要组合其他的WebKit属性。常见结合属性：</p><p>2.display: -webkit-box; 必须结合的属性 ，将对象作为弹性伸缩盒子模型显示 。</p><p>3.-webkit-box-orient 必须结合的属性 ，设置或检索伸缩盒对象的子元素的排列方式 。</p></div>"
+	},{
+		"title": "vue2.0 loading组件配置",
+		"type": "0",
+		"brand": "vue",
+		"content": "<div class='tips_wrap'><h2 class='tips_bigname'>vue2.0 loading组件配置</h2><p class='tips_name'>应用场景分析：</p><p class='t_indent_16 duanluo'>在用vue开发spa项目时，切换路由获取数据的时候，为了更好的用户体验，需要一个loading的加载样式，使得体验更好更接近原生.<img src='static/img/vue_loading/example.png'></p><p class='tips_name'>具体操作步骤：</p><p class='t_indent_16 duanluo'>1.新建loading组件.<img src='static/img/vue_loading/1.png'></p><p class='t_indent_16 duanluo'>2.在需要的地方引入loading组件，比如App.vue(这里的loadingshow是vuex中的state保存的loading的状态，后面会具体说明);<img src='static/img/vue_loading/2.png'><img src='static/img/vue_loading/3.png'></p><p class='t_indent_16 duanluo'>3.在main.js中配置axios.<img src='static/img/vue_loading/4.png'></p><p class='t_indent_16 duanluo'>4.vuex状态管理.<img src='static/img/vue_loading/5.png'></p></div>"
+	},{
+		"title": "移动web开发规范",
+		"type": "1",
+		"brand": "移动端",
+		"content": "<div class='tips_wrap'><h2 class='tips_bigname'>移动web开发规范</h2><p class='tips_name'>基础交互</p><p class='t_indent_16 duanluo'>设置全局的CSS样式，避免图中的长按弹出菜单与选中文本的行为<img src='static/img/vue_mobile/1.png'><img src='static/img/vue_mobile/2.png'></p><p class='tips_name'>移动性能</p><p class='t_indent_16 duanluo'>要考虑Android低端机与2G网络场景下性能 注意！</p><p class='duanluo'>发布前必要检查项</p><p class='t_indent_16'>1.所有图片必须有进行过压缩.</p><p class='t_indent_16'>2.考虑适度的有损压缩，如转化为80%质量的jpg图片.</p><p class='t_indent_16 duanluo'>3.考虑把大图切成多张小图，常见在banner图过大的场景.</p><p class='duanluo'>加载性能优化, 达到打开足够快</p><p class='t_indent_16'>1.数据离线化，考虑将数据缓存在 localStorage</p><p class='t_indent_16'>2.初始请求资源数 < 4 注意！</p><p class='t_indent_16'>3.图片使用CSS Sprites 或 DataURI</p><p class='t_indent_16'>4.外链 CSS 中避免 @import 引入</p><p class='t_indent_16'>5.考虑内嵌小型的静态资源内容</p><p class='t_indent_16'>6.初始请求资源gzip后总体积 < 50kb</p><p class='t_indent_16'>7.静态资源(HTML/CSS/JS/Image)是否优化压缩？</p><p class='t_indent_16'>8.避免打包大型类库</p><p class='t_indent_16'>9.尽量使用css3代替图片</p><p class='t_indent_16'>10.初始首屏之外的静态资源（JS/CSS）延迟加载 注意！</p><p class='t_indent_16'>11.初始首屏之外的图片资源按需加载（判断可视区域） 注意！</p><p class='t_indent_16'>12.单页面应用(SPA)考虑延迟加载非首屏业务模块</p><p class='t_indent_16 duanluo'>13.开启Keep-Alive链路复用</p><p class='duanluo'>运行性能优化, 达到操作足够流畅</p><p class='t_indent_16'>1.避免 iOS 300+ms 点击延时问题 注意！</p><p class='t_indent_16'>2.缓存 DOM 选择与计算</p><p class='t_indent_16'>3.避免触发页面重绘的操作</p><p class='t_indent_16'>4.Debounce连续触发的事件(scroll / resize / touchmove等)，避免高频繁触发执行 注意！</p><p class='t_indent_16'>5.尽可能使用事件代理，避免批量绑定事件</p><p class='t_indent_16'>6.使用CSS3动画代替JS动画</p><p class='t_indent_16'>7.避免在低端机上使用大量CSS3渐变阴影效果，可考虑降级效果来提升流畅度？</p><p class='t_indent_16'>8.HTML结构层级保持足够简单</p><p class='t_indent_16'>9.尽能少的使用CSS高级选择器与通配选择器</p><p class='t_indent_16'>10.Keep it simple</p></div>"
+	},{
+		"title": "Vue开发遇到的一些问题",
+		"type": "0",
+		"brand": "vue",
+		"content": "<div class='tips_wrap'><h2 class='tips_bigname'>Vue开发遇到的一些问题</h2><p class='tips_name'>1、文件路径过于冗长或者相对路径过于麻烦：</p><p class='t_indent_16'>通过webpack自定义路径别名，就可以</p><img src='static/img/vue_problem/1.png'><p class='tips_name'>2、组件中的样式会相互影响。</p><p class='t_indent_16 duanluo'>通过为组件中的style标签添加scoped属性就会是组件的样式不会外溢。Vue的scoped是通过为组件添加唯一的属性标识来实现样式不会污染其他组件同名元素的。</p><p class='tips_name'>3.父子元素同时绑定click事件：</p><p class='t_indent_16'>在开发的过程中，我们经常会遇到父子元素都绑定一个事件，当点击子元素的时候由于事件的冒泡机制会造成对父元素事件的触发。在原生JS中我们可以采用event.stopPropagation()阻止时间冒泡。那么在vue中如何解决这个问题。我们只需要在click后面加上一个.stop就可以了。</p></div>"
+	},{
+		"title": "Vuex心得",
+		"type": "0",
+		"brand": "vue",
+		"content": "<div class='tips_wrap'><h2 class='tips_bigname'>Vuex心得</h2><p class='tips_name'>什么是vuex</p><p class='t_indent_16 duanluo'>Vuex 是一个专为 Vue.js 应用程序开发的状态管理模式。</p><p class='tips_name'>状态管理模式有什么用？</p><p class='t_indent_16 duanluo'>传统mvc页面，在用户进入A页面后，ajax获取到用户购物车的信息，然后当用户跳转到B,C,D等页面时候，又要重新获取这个购物车信息,走缓存或者把这个值传过去，这样特别麻烦且影响性能.如果使用vuex，那么只需获取一次，其他页面要使用就需访问Getters即可.</p><p class='tips_name'>vuex的结构</p><p class='t_indent_16'>index:主文件，暴露给外部使用</p><p class='t_indent_16'>actions:存放actions动作，分发mutations</p><p class='t_indent_16'>mutations:操作数据的函数</p><p class='t_indent_16'>state:存放vuex的数据</p><p class='t_indent_16 duanluo'>getters:获取vuex数据的方法</p><img src='static/img/vue_vuex/1.png'><img src='static/img/vue_vuex/2.png'><img src='static/img/vue_vuex/3.png'><img src='static/img/vue_vuex/4.png'><img src='static/img/vue_vuex/5.png'><p class='duanluo'></p><p class='tips_name'>vuex+ajax怎么配合使用?</p><p class='t_indent_16 duanluo'>项目中往往会遇到这么个问题：ajax返回到的某个数据，然后需要改变vuex里面的state,应该怎么操作呢？</p><p class='t_indent_16 duanluo'>1.调用辅助函数mapActions,在辅助函数mapActions里面注册需要用到的actions,然后调用这个actions，把ajax回调得到的数据传进去<img src='static/img/vue_vuex/6.png'></p><p class='t_indent_16 duanluo'>2.在对应的actions里面增加参数接受数据<img src='static/img/vue_vuex/7.png'><p class='t_indent_16 duanluo'>3.在对应的mutations里面增加参数接受数据（切记第一个接受的是state,第二个开始才是传递的数据）<img src='static/img/vue_vuex/8.png'><img src='static/img/vue_vuex/9.png'></p></div>"
+	},{
+		"title": "Vue路由钩子",
+		"type": "0",
+		"brand": "vue",
+		"content": "<div class='tips_wrap'><h2 class='tips_bigname'>Vue路由钩子</h2><p class='tips_name'>什么是路由钩子</p><p class='t_indent_16 duanluo'>路由钩子主要是给使用者在路由发生变化时进行一些特殊的处理而定义的</p><p class='tips_name'>路由钩子种类</p><p class='t_indent_16'>1.全局路由钩子.( route.beforeEach 注意：必须next() )</p><p class='t_indent_16'>2.路由内的路由钩子 ( beforeEnter )</p><p class='t_indent_16 duanluo'>3.组件内路由钩子 ( beforeRouteEnter )</p><p class='tips_name'>参数说明</p><p class='t_indent_16'>每个路由钩子都包括三个参数:to,from,next</p><p class='t_indent_16'>1.to:要去哪里</p><p class='t_indent_16'>2.from:从哪里来</p><p class='t_indent_16 duanluo'>3.next:跳转</p><p class='tips_name'>项目运用</p><p class='t_indent_16'>实际项目中，经常会碰到这么个需求，在进入‘购物车’或者'个人中心'页面的时候，需要用户登录状态，否则跳登录框</p><img src='static/img/vue_gouzi/1.png'><p class='duanluo'></p><p class='tips_name'>具体开发</p><p class='t_indent_16'>比如登录的组件地址是login，那在切换路由之前判断用户是否登录，如果登录就next(),否则就跳登录组件</p><img src='static/img/vue_gouzi/2.png'></div>"
+	},{
+		"title": "事件委托",
+		"type": "0",
+		"brand": "js/jq",
+		"content": "<div class='tips_wrap'><h2 class='tips_bigname'>事件委托</h2><p class='tips_name'>什么是事件委托</p><p class='t_indent_16 duanluo'>事件委托是通过事件冒泡的原理，利用父级去触发子级的事件。</p><p class='tips_name'>事件委托有什么用？</p><p class='t_indent_16 duanluo'>如果<span class='strong'>通过js动态创建</span>的子节点，需要重新绑定事件，而利用事件委托的话，只需要给父级绑定一个事件监听，即可让每个满足条件的子元素都绑定上相应的事件。</p><p class='tips_name'>案例分析</p><p class='t_indent_16 duanluo'>当前页面存在3个li，每个li点击都会变色，需求是点击body新增一个li，同样绑定这个变色的事件</p><p class='tips_name'>操作步骤</p><p class='t_indent_16 duanluo'>给父元素绑定事件，委托给需要的元素</p><img src='static/img/js/sjwt.png'><img src='static/img/js/sjwt_1.png'></div>"
+	},{
+		"title": "小程序开发心得",
+		"type": "0",
+		"brand": "小程序",
+		"content": "<div class='tips_wrap'><h2 class='tips_bigname'>es6小程序开发心得</h2><img src='static/img/tips_mp/1.png'><img src='static/img/tips_mp/2.png'><img src='static/img/tips_mp/3.png'></div>"
+	},{
+		"title": "es6学习笔记",
+		"type": "0",
+		"brand": "es6",
+		"content": "<div class='tips_wrap'><h2 class='tips_bigname'>es6学习笔记</h2><img src='static/img/tips_es6/1.png'><img src='static/img/tips_es6/2.png'><img src='static/img/tips_es6/3.png'><img src='static/img/tips_es6/4.png'><img src='static/img/tips_es6/5.png'><img src='static/img/tips_es6/6.png'></div>"
+	}]
+}

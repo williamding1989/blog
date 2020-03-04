@@ -1,0 +1,52 @@
+@charset "utf-8";
+.timewrap{
+    text-align: center;
+    margin: 0.5rem 0;
+}
+.timewrap .title{
+	color: #3472df;
+	font-size: 0.6rem;
+	line-height: 1.3rem;
+	position: relative;
+	display: inline-block;
+}
+.timewrap .title:before{
+    content: '';
+    position: absolute;
+    width: 2.5rem;
+    height: 2px;
+    background: #3472df;
+    top: 49%;
+    left: -2.8rem;
+}
+.timewrap .title:after{
+    content: '';
+    position: absolute;
+    width: 2.5rem;
+    height: 2px;
+    background: #3472df;
+    top: 49%;
+    right: -2.8rem;
+}
+.timebox span{
+	margin-right: 0.15rem;
+}
+.d_ten,
+.d_one,
+.h_ten,
+.h_one,
+.m_ten,
+.m_one,
+.s_ten,
+.s_one{
+	background: #222;
+	color: #fff;
+    display: inline-block;
+    width: 0.6rem;
+}
+.ms{
+	display: inline-block;
+    width: 0.6rem;
+	background: #ee0a60;
+	color: #fff;
+}

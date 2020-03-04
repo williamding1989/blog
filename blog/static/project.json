@@ -1,0 +1,27 @@
+{
+	"projectlist": [{
+		"name": "仿JD手机端首页",
+		"imgurl": "static/img/jd-bg.jpg",
+		"id": 0
+	},{
+		"name": "视频播放器",
+		"imgurl": "static/img/pro1.jpg",
+		"id": 1
+	},{
+		"name": "音乐播放器",
+		"imgurl": "static/img/pro2.jpg",
+		"id": 2
+	},{
+		"name": "vue-饿了么",
+		"imgurl": "static/img/elm.jpg",
+		"id": 3
+	},{
+		"name": "3d轮播",
+		"imgurl": "static/img/flash4.png",
+		"id": 4
+	},{
+		"name": "react-简书",
+		"imgurl": "static/img/nav-logo.png",
+		"id": 5
+	}]
+}

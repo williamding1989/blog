@@ -1,0 +1,14 @@
+@charset "utf-8";
+.adbox{
+    position: absolute;
+    width: 20%;
+    right: 2%;
+    top: 13%;
+    overflow: hidden;
+}
+.adbox li{
+	margin-bottom: 2px;
+}
+.adbox li img{
+	width: 100%;
+}

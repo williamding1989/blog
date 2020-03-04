@@ -1,0 +1,57 @@
+{
+	"profile" : {
+		"name": "丁琦斐",
+		"english": "william",
+		"age": "30",
+		"birth" : "1989-9-29",
+		"sex": "男",
+		"hukou": "上海",
+		"edu": "全日制本科",
+		"hobby": "旅游 健身 美剧 王者荣耀",
+		"workyear": "七年",
+		"fe_workyear": "五年",
+		"job": "前端开发工程师",
+		"motto": "幸福存在于生活之中,而生活存在于劳动之中  --- 列夫·托尔斯泰",
+		"state": "积极找工作"
+	},
+	"latestwork": {
+		"worktime": "3年",
+		"workname": "闪电降价移动端开发+淘集集小程序开发",
+		"myjob":[
+			"主要负责app内嵌的h5页面开发，电商活动页面的游戏开发，红包雨,刮刮卡等 ",
+			"app内功能模块开发，包括闪电砍价，量贩团，新客及秒杀 ",
+			"主导淘集集小程序开发，荣获18年十大互联网软件新星APP"
+		]
+	},
+	"skilllist": [{
+		"skillname": "vue",
+		"style": {
+			"width": "85%",
+			"transition-delay": "4s"
+		}
+	},{
+		"skillname": "webpack",
+		"style": {
+			"width": "80%",
+			"transition-delay": "4.2s"
+		}
+	},{
+		"skillname": "小程序",
+		"style": {
+			"width": "95%",
+			"transition-delay": "4.4s"
+		}
+	},{
+		"skillname": "react",
+		"style": {
+			"width": "85%",
+			"transition-delay": "4.6s"
+		}
+	},{
+		"skillname": "less",
+		"style": {
+			"width": "80%",
+			"transition-delay": "4.8s"
+		}
+	}]
+}
